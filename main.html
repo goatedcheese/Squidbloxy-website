@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Squidbloxy - Roblox Developer & 3D Modeler</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons for Discord and Twitter -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* Hide Scrollbar */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url("Landiongpagebg.jpg") center/cover fixed no-repeat;
+      color: #fff;
+      overflow-x: hidden;
+      scrollbar-width: none;
+    }
+
+    /* Fixed Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 1rem 2rem;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+      margin-top: 70px; /* leave space for header */
+    }
+    
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      max-width: 800px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #3b82f6;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    /* Section Styles – Transparent background */
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 900px;
+    }
+
+    section h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    /* About Section */
+    .about h2 {
+      width: 100%;
+      padding: 0.3rem 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 5px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Featured Projects */
+    .project-card {
+      background: rgba(30, 41, 59, 0.9);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .project-card img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .project-info {
+      padding: 1rem;
+    }
+
+    .project-info h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .project-info p {
+      font-size: 1rem;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 4rem 2rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    .social-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .social-links a {
+      font-size: 1.8rem;
+      color: #fff;
+      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #3b82f6;
+    }
+
+    /* Make any image within social links match the icon size */
+    .social-links a img {
+      width: 1.8rem;
+      height: auto;
+    }
+
+    /* Special sizing for extra Roblox icon */
+    .social-links a.roblox-icon img {
+      width: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Header -->
+  <header>
+    <h1>Squidbloxy</h1>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Roblox Developer & 3D Modeler</h2>
+    <p>Creating immersive experiences and stunning 3D assets to bring your ideas to life.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      With years of experience in Roblox development, I focus on crafting innovative games and designing high-quality 3D models that captivate players around the world. My passion for blending creativity with technical skill drives me to deliver immersive virtual experiences.
+    </p>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="featured">
+    <h2>Featured Projects</h2>
+    <div class="project-card" onclick="window.open('https://www.roblox.com/games/3587619225/Mega-Easy-Obby-825-Stages', '_blank')">
+      <img src="MegaEasyObby.webp" alt="Mega Easy Obby">
+      <div class="project-info">
+        <h3>Mega Easy Obby</h3>
+        <p>A fun, engaging obstacle course designed for all skill levels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Let's Work Together</h2>
+    <div class="social-links">
+      <a href="https://www.roblox.com/users/1688877727/profile" target="_blank"><i class="fab fa-roblox"></i></a>
+      <a href="https://discord.gg/uVzsS6Xw" target="_blank"><i class="fab fa-discord"></i></a>
+      <a href="https://x.com/Squidbloxy" target="_blank"><i class="fab fa-twitter"></i></a>
+      <!-- Extra Roblox icon using the image file with class for larger size -->
+      <a href="https://www.roblox.com/users/1688877727/profile" target="_blank" class="roblox-icon">
+        <img src="robloxicon.png" alt="Roblox Icon">
+      </a>
+    </div>
+  </section>
+</body>
+</html>
